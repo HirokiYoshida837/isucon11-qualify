@@ -35,8 +35,8 @@
   include: isucondition-python.yml
 - name: "roles/contestant/tasks/isucondition: Include isucondition-ruby.yml"
   include: isucondition-ruby.yml
-- name: "roles/contestant/tasks/isucondition: Include isucondition-rust.yml"
-  include: isucondition-rust.yml
+# - name: "roles/contestant/tasks/isucondition: Include isucondition-rust.yml"
+#   include: isucondition-rust.yml
 
 - name: "roles/contestant/tasks/isucondition: Deploy Service files"
   become_user: root
@@ -53,7 +53,7 @@
     - etc/systemd/system/isucondition.php.service
     - etc/systemd/system/isucondition.python.service
     - etc/systemd/system/isucondition.ruby.service
-    - etc/systemd/system/isucondition.rust.service
+    # - etc/systemd/system/isucondition.rust.service
 
 - name: "roles/contestant/tasks/isucondition: Deploy isucon11 initial-data"
   copy:
